@@ -1,0 +1,11 @@
+#gifSpace {
+    width: 75%;
+}
+
+.container {
+    flex: auto;
+}
+
+#searchSpace {
+    float: right;
+}
