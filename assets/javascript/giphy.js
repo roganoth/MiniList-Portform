@@ -1,8 +1,6 @@
 $(document).ready(function () {
     var gifs = ["cats", "dogs", "koalas", "bears", "birds", "barbarians"];
     var gifSearch;
-    var gifImage;
-    var i;
 
     function createButtons() {
         $("#buttonSpace").empty();
@@ -35,7 +33,7 @@ $(document).ready(function () {
             console.log(response);
             console.log(results);
             for (i=0; i<results.length; i++) {
-                gifImage = $("<img>");
+                var gifImage = $("<img>");
                 gifImage.attr("src",results[i].images.fixed_height_still.url);
                 gifImage.attr("still",results[i].images.fixed_height_still.url);
                 gifImage.attr("animate",results[i].images.fixed_height.url);
