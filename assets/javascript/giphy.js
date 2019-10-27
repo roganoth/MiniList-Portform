@@ -16,7 +16,9 @@ $(document).ready(function () {
     $("#addGif").on("click", function (event) {
         event.preventDefault();
         gifSearch = $("#searchInput").val().trim();
-        gifs.push(gifSearch);
+        if (gifs.indexOf(gifSearch) < 0){
+            gifs.push(gifSearch);
+        }
         createButtons();
     })
 
